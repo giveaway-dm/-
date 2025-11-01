@@ -657,6 +657,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
   // Start langsung di awal (karena page1 aktif pertama)
   startSnowPage1();
 });
+ document.addEventListener("click", () => {
+  document.documentElement.requestFullscreen().catch(err => {
+    console.log("Gagal fullscreen:", err);
+  });
+}, { once: true });     
 </script>
 </body>
 </html>
